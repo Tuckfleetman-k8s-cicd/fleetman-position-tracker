@@ -37,6 +37,7 @@ pipeline {
 				withSonarQubeEnv('sonar-server') {
 					sh '''
 					mvn clean verify sonar:sonar \
+                                        -Dsonar.projectName=fleetman-position-tracker \
 					-Dsonar.projectKey=fleetman-position-tracker '''
 				}
                 
